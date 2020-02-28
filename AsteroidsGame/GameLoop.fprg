@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="s5111564"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-03-21 11:53:57 AM"/>
+        <attribute name="created" value="czUxMTE1NjQ7UEM0MjI5NTsyMDE5LTAzLTIxOzEwOjM3OjA2IEFNOzIxNDc="/>
+        <attribute name="edited" value="czUxMTE1NjQ7UEM0MjI5NTsyMDE5LTAzLTIxOzExOjUzOjU3IEFNOzE7MjI2MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mWindow" type="String" array="False" size=""/>
+            <declare name="mRenderer" type="String" array="False" size=""/>
+            <call expression="createWindow"/>
+            <declare name="gameEnded" type="Boolean" array="False" size=""/>
+            <assign variable="gameEnded" expression="False"/>
+            <call expression="createPlayer"/>
+            <declare name="Asteroids" type="Integer" array="True" size="20"/>
+            <declare name="PlayerHealth" type="Integer" array="False" size=""/>
+            <while expression="!gameEnded">
+                <call expression="drawPlayer"/>
+                <call expression="spawnAsteroids"/>
+                <call expression="PlayerMovement"/>
+                <for variable="loop" start="0" end="length(Asteroids)" direction="inc" step="1">
+                    <call expression="drawAsteroid"/>
+                    <call expression="AsteroidMovement"/>
+                    <call expression="Collision"/>
+                </for>
+                <call expression="PointsChange"/>
+                <call expression="CheckForKeyInput"/>
+                <if expression="PlayerHealth &lt;= 0">
+                    <then>
+                        <assign variable="gameEnded" expression="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

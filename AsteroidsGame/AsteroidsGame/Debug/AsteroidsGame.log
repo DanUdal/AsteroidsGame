@@ -1,0 +1,26 @@
+﻿  Classes.cpp
+h:\asteroidsgame\asteroidsgame\classes.h(107): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+h:\asteroidsgame\asteroidsgame\classes.h(120): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+h:\asteroidsgame\asteroidsgame\classes.cpp(259): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\asteroidsgame\asteroidsgame\classes.cpp(289): warning C4018: '<': signed/unsigned mismatch
+h:\asteroidsgame\asteroidsgame\classes.cpp(292): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+h:\asteroidsgame\asteroidsgame\classes.cpp(293): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+h:\asteroidsgame\asteroidsgame\classes.cpp(299): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+h:\asteroidsgame\asteroidsgame\classes.cpp(300): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  AsteroidsGame.vcxproj -> H:\AsteroidsGame\Debug\AsteroidsGame.exe

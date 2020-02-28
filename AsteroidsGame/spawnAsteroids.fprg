@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="s5111564"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-03-21 06:21:01 PM"/>
+        <attribute name="created" value="czUxMTE1NjQ7UEM0Mjg2MTsyMDE5LTAzLTIxOzA2OjAwOjU5IFBNOzIxNjQ="/>
+        <attribute name="edited" value="czUxMTE1NjQ7UEM0Mjg2MTsyMDE5LTAzLTIxOzA2OjIxOjAxIFBNOzE7MjI2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StaticTimer" type="Real" array="False" size=""/>
+            <comment text="set timer's initial value to 10 so that asteroids spawn right away"/>
+            <declare name="xPos" type="Integer" array="False" size=""/>
+            <declare name="yPos" type="Integer" array="False" size=""/>
+            <declare name="speed" type="Real" array="False" size=""/>
+            <declare name="StaticDifficulty" type="Integer" array="False" size=""/>
+            <comment text="implicitly define difficulty once to 1 as it's static"/>
+            <if expression="StaticTimer &gt; (10/difficulty)">
+                <then>
+                    <assign variable="StaticTimer" expression="0"/>
+                    <for variable="i" start="0" end="difficulty" direction="inc" step="1">
+                        <call expression="randomisePosAndSpeed"/>
+                        <call expression="createAsteroid"/>
+                    </for>
+                    <assign variable="staticDifficulty" expression="staticDifficulty + 1"/>
+                </then>
+                <else>
+                    <assign variable="StaticTimer" expression="StaticTimer + (1/60)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
